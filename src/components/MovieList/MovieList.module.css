@@ -14,16 +14,16 @@
 
 .movieGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Taille minimale de 200px par colonne */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
-    justify-content: center; /* Centre les films horizontalement */
+    justify-content: center;
     align-items: start;
     margin-top: 20px;
     padding: 10px;
 }
 
 .movieCard {
-    width: 200px; /* Taille fixe pour chaque carte */
+    width: 200px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -33,13 +33,13 @@
 }
 
 .movieCard img {
-    width: 100%; /* L'image occupe toute la largeur de la carte */
+    width: 100%;
     height: auto;
     border-radius: 8px;
 }
 
 .movieCard:hover {
-    transform: scale(1.05); /* Agrandissement léger au survol */
+    transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 

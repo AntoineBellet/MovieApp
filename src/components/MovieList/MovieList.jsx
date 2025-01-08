@@ -6,8 +6,8 @@ import styles from './MovieList.module.css';
 const MovieList = () => {
     const [movies, setMovies] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
-    const [currentPage, setCurrentPage] = useState(1); // État pour la page actuelle
-    const [totalPages, setTotalPages] = useState(1); // État pour le nombre total de pages
+    const [currentPage, setCurrentPage] = useState(1);
+    const [totalPages, setTotalPages] = useState(1);
 
     useEffect(() => {
         const fetchMovies = async () => {
@@ -16,14 +16,14 @@ const MovieList = () => {
                     `https://api.themoviedb.org/3/movie/popular?api_key=6fe2f414234007f59524a7b2524cab23&page=${currentPage}`
                 );
                 setMovies(response.data.results);
-                setTotalPages(response.data.total_pages); // Met à jour le nombre total de pages
+                setTotalPages(response.data.total_pages);
             } catch (error) {
                 console.error('Error fetching popular movies:', error);
             }
         };
 
         fetchMovies();
-    }, [currentPage]); // Déclenche l'appel API à chaque changement de page
+    }, [currentPage]);
 
     const filteredMovies = movies.filter((movie) =>
         movie.title.toLowerCase().includes(searchTerm.toLowerCase())
