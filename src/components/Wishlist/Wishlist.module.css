@@ -1,0 +1,75 @@
+.movieGrid {
+    display: flex; /* Utilise flexbox pour la mise en page */
+    flex-wrap: wrap; /* Permet le retour à la ligne si les cartes ne tiennent pas sur une ligne */
+    gap: 20px; /* Espacement entre les cartes */
+    justify-content: flex-start; /* Aligne les cartes à gauche */
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.movieCard {
+    flex: 0 1 200px; /* Chaque carte a une largeur de 200px minimum */
+    max-width: 250px; /* Largeur maximale des cartes */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.movieCard:hover {
+    transform: scale(1.05); /* Zoom au survol */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.moviePoster {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.detailsButton, .removeButton {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.detailsButton {
+    background-color: #007bff;
+    color: white;
+}
+
+.detailsButton:hover {
+    background-color: #0056b3;
+}
+
+.removeButton {
+    background-color: #dc3545;
+    color: white;
+}
+
+.removeButton:hover {
+    background-color: #c82333;
+}
+
+.goBackButton {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.goBackButton:hover {
+    background-color: #0056b3;
+}
